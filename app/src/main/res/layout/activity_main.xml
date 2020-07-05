@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/input"
+        style="@style/InputStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="end"
+        app:layout_constraintBottom_toTopOf="@id/result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        style="@style/InputStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="end"
+        app:layout_constraintBottom_toTopOf="@id/buttonsLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onAllClear"
+                android:text="@string/btn_ac" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onClear"
+                android:text="@string/btn_c" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:text="@string/btn_percent" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onOperator"
+                android:text="@string/btn_division"
+                android:textColor="@color/ButtonSecondaryColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_7" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_8" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_9" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onOperator"
+                android:text="@string/btn_multiply"
+                android:textColor="@color/ButtonSecondaryColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_4" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_5" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_6" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onOperator"
+                android:text="@string/btn_minus"
+                android:textColor="@color/ButtonSecondaryColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_1" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_2" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_3" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onOperator"
+                android:text="@string/btn_plus"
+                android:textColor="@color/ButtonSecondaryColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDecimalPoint"
+                android:text="@string/btn_dot" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:onClick="onDigit"
+                android:text="@string/btn_0" />
+
+            <TextView
+                style="@style/ButtonsStyle"
+                android:layout_weight="2"
+                android:background="@color/ButtonSecondaryColor"
+                android:onClick="onEquals"
+                android:text="@string/btn_equals" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
